@@ -1,5 +1,5 @@
 import { containerModalReserva, btnReservar, modalAccionRealizar, modalAnunciosContainer, localUsuariosReservados } from "../funciones/selectores.js";
-import UI from "../classes/UI.JS";
+import UI from "../classes/UI.js";
 import Header from "./Header.js";
 import {
   validarCamposVacios, validarDNI, generarCodigo, existeDNI, validarUsuarioExistente,
