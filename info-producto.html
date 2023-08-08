@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El Rincón Gourmet</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/hedear.css" />
+    <link rel="stylesheet" href="css/app.css">
+
+    <!-- ICONOS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+  </head>
+  <body style="background: #111315">
+    <div id="header-container">
+      
+      <!-- NABVAR -->
+      <div
+        class="offcanvas offcanvas-start"
+        data-bs-scroll="true"
+        tabindex="-1"
+        id="offcanvasWithBothOptions"
+        style="background: #0c0e10;"
+ 
+      >
+        <div class="offcanvas-header pb-0">
+          <div
+            class="offcanvas-brand d-flex mx-auto p-2"
+          >
+            <img
+              class="img-fluid"
+              src="img/iconos/comida-rapida.png"
+              alt=""
+              width="120px"
+            />
+          </div>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+            style="margin-top: -120px;"
+          ><i class="bi bi-x-lg"></i></button>
+        </div>
+        <div class="offcanvas-body">
+          <h1 class="text-center">El Rincón Gourmet</h1>
+          <div class="mx-4 mt-3">
+             <a href="#" class="d-flex align-items-center p-2 active">
+              <img src="img/iconos/icono-food.png" alt="" width="30px">
+              <p class="mb-0 mx-2">Platillos</p>
+             </a>
+             <a href="carrito.html" class="d-flex align-items-center p-2">
+              <i class="bi bi-cart2"></i>
+              <p class="mb-0 mx-2">Platillos añadidos al carrito</p>
+             </a>
+             <a href="pedidos-realizados.html" class="d-flex align-items-center p-2">
+              <i class="bi bi-currency-exchange"></i>
+              <p class="mb-0 mx-2">Lista de compra de clientes</p>
+             </a>
+             <a href="comentarios.html" class="d-flex align-items-center p-2">
+              <i class="bi bi-chat-dots"></i>
+              <p class="mb-0 mx-2">Reseñas</p>
+             </a>
+          </div>
+        </div>
+      </div>
+      <!-- FIN NABVAR -->
+      
+      <!-- ENCABEZADO -->
+      <nav
+        class="navbar navbar-expand-sm navbar-dark bg-dark"
+        aria-label="Third navbar example"
+      >
+        <div class="container-fluid">
+          <div
+            class="navbar-brand p-2"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasWithBothOptions"
+          >
+            <img
+              class="img-fluid"
+              src="img/iconos/comida-rapida.png"
+              alt=""
+              width="40px"
+            />
+          </div>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbars"
+            aria-controls="navbars"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbars">
+            <form role="search">
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon1">
+                  <i class="bi bi-search"></i>
+                </span>
+                <input
+                  type="search"
+                  class="form-control"
+                  placeholder="Buscar platillo..."
+                  aria-label="Input group example"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+              </div>
+            </form>
+            <div class="d-flex justify-content-end w-100">
+              <ul class="d-flex justify-content-around justify-content-center align-items-center mt-2 list-unstyled list-inline">
+                <li class="nav-item">
+                  <button class="btn btn-danger d-flex align-items-center mt-1" data-bs-toggle="modal" data-bs-target="#modal-reserva">
+                    <img src="img/iconos/mesa.png" class="mx-1" />
+                    <p class="mx-1 mb-0">Reservar</p>
+                  </button>
+                </li>
+                <li class="nav-item position-relative" onclick="irCarrito()">
+                  <i class="bi bi-cart2" style="color: #7f7c7c; cursor: pointer;" onclick="irCarrito()"></i>
+                  <span class="badge badge-circle carrito d-none">0</span>
+                </li>
+                <li class="nav-item position-relative" onclick="irPedidos()">
+                  <img src="img/iconos/pedido.png" style="cursor: pointer;"/>
+                  <span class="badge badge-circle pedidos d-none">0</span>
+                </li>
+                <li class="nav-item dropdown" data-bs-toggle="modal" data-bs-target="#modal-comentarios" style="cursor: pointer;">
+                  <i class="bi bi-star-fill"></i>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- FIN ENCABEZADO -->
+    </div>
+
+
+    <div id="producto-seleccionado" class="container-fluid p-4" style="color: #FFF">
+      <div class="volver-atras d-flex" style="cursor: pointer; max-width: 120px;" onclick="regresarAtras()">
+        <i class="bi bi-arrow-bar-left"></i>
+        <p class="mx-2">Volver atras</p>
+      </div>
+      <div class="row">
+        <!-- CONTENIDO DINAMICO -->
+      </div>
+    </div>
+
+
+
+     <!-- MODAL DE RESERVAS -->
+     <div class="modal fade" id="modal-reserva" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header pb-1">
+            <button type="button" class="btn-close d-flex align-items-center" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button></button>
+          </div>
+          <div class="modal-body py-0">
+            <!-- CONTENIDO DINAMICO -->
+          </div>
+          <div class="modal-footer d-flex">
+            <button type="button" class="btn btn-primary">Reservar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- fIN MODAL DE RESERVAS -->
+
+    <!-- MODAL DATOS RESERVA -->
+    <div class="modal fade" id="modal-datos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header pb-1">
+            <button type="button" class="btn-close d-flex align-items-center" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button></button>
+          </div>
+          <!-- CONTENIDO DINAMICO -->
+        </div>
+      </div>
+    </div>
+    <!-- FIN MODAL DE DATOS RESERVA --> 
+
+
+
+    <!-- MODAL DE COMENTARIOS -->
+    <div class="modal fade" id="modal-comentarios" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header pb-1">
+            <button type="button" class="btn-close d-flex align-items-center" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button></button>
+          </div>
+          <div class="modal-body py-0">
+            <h2 class="text-center mx-2">¿Puedes calificar la atención de nuestro restaurante?</h2>
+            <form id="form-puntaje">
+                <p class="calificacion d-flex justify-content-center mx-auto justify-content-around">
+                      <input id="radio1" type="radio" name="estrellas" value="5"><!--
+                    --><label for="radio1"><i class="bi bi-star"></i></label><!--
+                   --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                  --><label for="radio2"><i class="bi bi-star"></i></label><!--
+                  --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                  --><label for="radio3"><i class="bi bi-star"></i></label><!--
+                  --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                  --><label for="radio4"><i class="bi bi-star"></i></label><!--
+                  --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                  --><label for="radio5"><i class="bi bi-star"></i></label>
+                </p>
+              <div class="form-floating m-3">
+                <input type="text" class="form-control" id="nombre-input" placeholder="name@example.com">
+                <label for="floatingInput">Ingresa tus nombres y apellidos</label>
+              </div>
+              <div class="form-floating m-3">
+              <textarea class="form-control" placeholder="Leave a comment here" style="height: 200px"></textarea>
+              <label for="floatingTextarea2">Comentario</label>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer d-flex">
+            <button type="button" class="btn btn-primary">Enviar Reseña</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FIN MODAL DE COMENTARIOS --> 
+
+     <!-- MODAL ANUNCIOS -->
+     <div class="modal fade" id="modal-anuncios" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <!-- CONTENIDO DINAMICO -->
+        </div>
+      </div>
+    </div>
+    <!-- FIN MODAL ANUNCIOS --> 
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/funciones/bootstrap.min.js"></script>
+    <script type="module" src="js/info-producto.js"></script>
+    <script>
+        const regresarAtras = () => window.location.href = 'index.html';
+
+         // Ir al carrito 
+      const irCarrito = () => window.location.href = 'carrito.html';
+      // Ir a los pedidos 
+      const irPedidos = () => window.location.href = 'pedidos-realizados.html';
+    </script>
+ 
+  </body>
+</html>

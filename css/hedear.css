@@ -1,0 +1,355 @@
+/* SIDEBAR */
+#header-container .offcanvas-brand {
+    background: #dc3545;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+#header-container .btn-close,
+#modal-reserva .btn-close,
+#modal-comentarios .btn-close {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 900;
+    background: none;
+}
+
+
+#header-container .offcanvas-body h1 {
+    color: aliceblue;
+    font-size: 30px;
+}
+
+#header-container .offcanvas-body p {
+    color: #dddddd;
+}
+
+#header-container .offcanvas-body .align-items-center {
+    text-decoration: none;
+    cursor: pointer;
+} 
+
+#header-container .offcanvas-body .align-items-center.active {
+    background: #1c2025;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+#header-container .offcanvas-body .align-items-center i {
+    color: #7f7c7c;
+    font-size: 25px;
+}
+
+
+
+/* FIN DEL SIDEBAR */
+
+/* NAV */ 
+#header-container .navbar.navbar-expand-sm {
+    background: #191d20;
+
+}
+
+#header-container .navbar-brand,
+#header-container .offcanvas-brand {
+    background: #dc3545;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+#header-container #navbars form span,
+#header-container #navbars form input {
+    background: #272a30;
+    color: #838485;
+    cursor: pointer;
+    border: none;
+
+}
+
+#header-container #navbars .justify-content-around {
+    width: 50%;
+
+}
+
+#header-container #navbars .justify-content-around .nav-item {
+    text-decoration: none;
+
+}
+
+#header-container #navbars .justify-content-around button {
+    background:  #d01414;
+
+}
+
+#header-container #navbars .justify-content-around i,
+#header-container #navbars .justify-content-around img {
+    font-size: 30px;
+    width: 30px;
+    margin-bottom: 0;
+
+}
+
+#header-container #navbars .justify-content-around .dropdown {
+    background-color: #d01414;
+    border-radius: 50%;
+    padding: 0 10px;
+
+}
+
+#header-container #navbars .justify-content-around .dropdown i {
+    color: yellow;
+}
+
+.nav-item {
+    position: relative;
+  }
+  
+  .badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #d01414;
+    color: white;
+    border-radius: 50%;
+    padding: 5 2px;
+  }
+
+  .badge.carrito {
+    top: 0px;
+  }
+/* FIN DEL NAV */  
+
+
+/* MODAL RESERVA */
+#modal-reserva .modal-content,
+#modal-comentarios .modal-content,
+#modal-anuncios .modal-content {
+    background: #191d20;
+}
+
+#modal-reserva .btn-close,
+#modal-comentarios .btn-close,
+#modal-anuncios .btn-close {
+    background-color: #272a30;
+    border-radius: 50%;
+}
+
+#modal-reserva .modal-content .modal-header,
+#modal-comentarios .modal-content .modal-header,
+#modal-anuncios .modal-content .modal-header {
+    border-bottom: none;
+}
+
+#modal-reserva .modal-content .modal-body h2,
+#modal-comentarios .modal-content .modal-body h2,
+#modal-anuncios .modal-content .modal-body h2  {
+    color: #FFF;
+}
+
+#modal-reserva .modal-content .modal-body .mesas-disponibles div.disponible {
+    background-color: #363a43;
+    margin: 4px 2px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#modal-reserva .modal-content .modal-body .mesas-disponibles div.mesa-vip {
+    background-color: #696b6c;
+}
+
+#modal-reserva .modal-content .modal-body .mesas-disponibles div.no-disponible {
+    background-color: #1f2327;
+    opacity: 0.4;
+    pointer-events: none;
+    cursor: not-allowed;
+    margin: 4px 2px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#modal-reserva .modal-content .modal-body .mesas-disponibles div p {
+    color: #FFF;
+}
+
+#modal-reserva .modal-content .modal-footer,
+#modal-comentarios .modal-content .modal-footer,
+#modal-anuncios .modal-content .modal-footer {
+    justify-content: center;
+    border-top: none;
+}
+
+#modal-reserva .modal-content .modal-footer button,
+#modal-comentarios .modal-content .modal-footer button {
+    background-color: #d01414;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    margin: 0 20px;
+}
+/* FIN MODAL RESERVA */
+
+
+/* MODAL COMENTARIOS */
+ /* Estrellas */
+   #modal-comentarios .calificacion input[type="radio"] {
+    display: none;
+    }
+    
+    #modal-comentarios .calificacion  {
+        max-width: 250px;
+    }
+    
+    #modal-comentarios .calificacion i {
+      font-size: 35px;
+      color: #616466;
+    
+    }
+    #modal-comentarios .calificacion i:hover,
+    #modal-comentarios .calificacion i:hover ~ i {
+        color: orange;
+    }
+    
+    #modal-comentarios .calificacion {
+        direction: rtl;
+        unicode-bidi: bidi-override;
+        text-align: center;
+        }
+    
+    #modal-comentarios .calificacion input[type="radio"]:checked ~ label i {
+        color: orange;
+    }
+ /* Fin estrellas */
+
+ #modal-comentarios .form-floating  input {
+    background-color: #272a30;
+    border: none;
+    border-radius: 10px;
+    color: #FFF;
+  
+  }
+
+#modal-comentarios .form-floating  textarea {
+    background-color: #272a30;
+    border: none;
+    border-radius: 10px;
+    color: #FFF;
+  
+  }
+
+  #modal-comentarios .form-floating  label  {
+    color: #616466;
+  }
+/* FIN MODAL COMENTARIOS */
+
+/* MODAL ANUNCIOS */
+ /* Consultar reservas adquiridas */
+#modal-anuncios .consultar-reservas h2,
+#modal-anuncios .consultar-reservas .dni-usuario {
+ text-transform: uppercase;
+}
+
+#modal-anuncios .consultar-reservas .dni-usuario span {
+  background-color: #272a30;
+  padding: 5px 15px;
+  border-radius: 10px;
+  font-size: 30px;
+  border: #dddddd dotted;
+ }
+
+ #modal-anuncios .consultar-reservas .total-mesas  {
+   padding-top: 20px;
+   font-size: 20px;
+}
+
+#modal-anuncios .consultar-reservas .container-fluid p.mb-1 {
+    font-size: 20px;
+    text-transform: uppercase;
+ }
+ 
+  #modal-anuncios .consultar-reservas .row {
+  border: solid 3px #dddddd;
+  border-radius: 20px;
+  background-color: #272a30;
+ }
+
+ #modal-anuncios .consultar-reservas .row .col-12 img {
+    width: 100px;
+ }
+
+ #modal-anuncios .consultar-reservas .row p.nombre-mesa {
+    font-size: 25px;
+ }
+
+ #modal-anuncios .consultar-reservas .row p.mb-0 {
+    text-transform: uppercase;
+ }
+ /* Fin de consultar reservas adquiridas */
+
+  /* cancelar y reserva mesa */
+#modal-anuncios .aviso i {
+    font-size: 100px;
+}
+
+#modal-anuncios .aviso h5 {
+    font-size: 20px;
+    text-align: center;
+}
+/* FIN MODAL ANUNCIOS */
+
+
+/* MODAL DE SWITALETS */
+.container-codigo {
+    background-color: #aa2a2a;
+
+}
+.title-codigo {
+    font-size: 30px;
+    font-family:Arial, Helvetica, sans-serif;
+    color: #FFF;
+
+}
+.input-label-codigo {
+    color: #FFF;
+    font-size: 20px;
+}
+
+.input-codigo {
+    background-color: #272a30;
+    border: none;
+    border-radius: 10px;
+    color: #FFF;
+}
+
+.btn-codigo {
+    border: none;
+    width: 100px;
+}
+/* FIN DE MODAL DE SWITALETS */
+
+
+@media screen and (max-width: 898px) {
+    #header-container #navbars .justify-content-around {
+        width: 100%;
+    
+    }
+
+  }
+
+  @media screen and (max-width: 580px) {
+    #navbars form {
+        margin-top: 15px;
+    }
+
+    #header-container #navbars .justify-content-around {
+        padding-top: 10px;
+    }
+  }
+
+
+
+
+
+
+
